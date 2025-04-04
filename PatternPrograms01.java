@@ -1,4 +1,4 @@
-public class PatternProgram {
+public class PatternPrograms01 {
     public static void main(String[] args) {
 
         /*  01-PATTERN - STAR PRINT 01
