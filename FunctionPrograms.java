@@ -148,7 +148,7 @@ public class FunctionPrograms {
         binToDec(d);
 
 
-        // DECIMAL TO BINARY - OPPOSITE OF ABOVE PROGRAM (BINARY OF DECIMAL)
+        // DECIMAL TO BINARY - OPPOSITE OF ABOVE PROGRAM - (BINARY OF DECIMAL)
         System.out.println("(7) DECIMAL TO BINARY :-");
         System.out.print("Enter decimal no. : ");
         int decimalNum = sc.nextInt();
