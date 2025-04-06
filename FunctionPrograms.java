@@ -55,6 +55,37 @@ public class FunctionPrograms {
     }
 
 
+    /* BINARY TO DECIMAL */
+    public static void binToDec(int d) {
+        int pow = 0;
+        int decNum = 0;
+
+        while (d > 0) {
+            int lastDigit = d % 10;
+            decNum = decNum + (lastDigit * (int) Math.pow(2, pow));   // base is 2 because converting bin to dec
+
+            pow++;
+            d = d/10;
+        }
+        System.out.println("Decimal no. is : " + decNum);
+    }
+
+
+    /* DECIMAL TO BINARY */
+    public static void decToBin(int decimalNum) {
+        int pow = 0;
+        int binNum = 0;
+
+        while (decimalNum > 0) {
+            int remainder = decimalNum % 2;
+            binNum = binNum + (remainder * (int) Math.pow(10, pow));   // base is 10 because converting dec to bin
+            pow++;
+            decimalNum = decimalNum / 2;
+        }
+        System.out.println("It's binary no. is : " + binNum);
+    }
+
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -109,9 +140,19 @@ public class FunctionPrograms {
         System.out.println();
 
 
-        // BINARY TO DECIMAL - binary (1 or 0 as ex - 101110)  into decimal (ex - 1.0)
+        // BINARY TO DECIMAL - binary (1 or 0 as ex - 101110) into decimal (ex - 1.0)
         System.out.println("(6) BINARY TO DECIMAL :-");
         System.out.print("Enter d : ");
-        int d =sc.nextInt();
+        int d = sc.nextInt();
+
+        binToDec(d);
+
+
+        // DECIMAL TO BINARY - OPPOSITE OF ABOVE PROGRAM (BINARY OF DECIMAL)
+        System.out.println("(7) DECIMAL TO BINARY :-");
+        System.out.print("Enter decimal no. : ");
+        int decimalNum = sc.nextInt();
+
+        decToBin(decimalNum);
     }
 }
