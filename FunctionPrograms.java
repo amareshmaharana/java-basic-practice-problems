@@ -86,6 +86,21 @@ public class FunctionPrograms {
     }
 
 
+    /* PALINDROME NUMBER */
+    public static boolean isPalindrome(int n) {
+        int palindrome = n;
+        int reverse = 0;
+
+        while (palindrome != 0) {
+            int rem = palindrome % 10;
+            reverse = reverse * 10 + rem;
+            palindrome = palindrome / 10;
+        }
+
+        return n == reverse;
+    }
+
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -154,5 +169,18 @@ public class FunctionPrograms {
         int decimalNum = sc.nextInt();
 
         decToBin(decimalNum);
+
+
+        // PALINDROME NUMBER - ex : 121, 222
+        System.out.println("(8) PALINDROME NUMBER :-");
+        System.out.print("Enter a num : ");
+        int palindrome = sc.nextInt();
+
+        if(isPalindrome(palindrome)) {
+            System.out.println("The num " + palindrome + " is a palindrome number.");
+        } else {
+            System.out.println("The num " + palindrome + " is not a palindrome number.");
+        }
+        System.out.println();
     }
 }
